@@ -21,7 +21,7 @@ function FormularioCadastro() {
 
     const cadastrarUsuario = async () => {
         try {
-            const response = await axios.post('http://localhost:8080/usuarios', {nome, sexo, idade, altura, peso, posicao, numeroDaCamisa})
+            const response = await axios.post('https://tcc-backend-senai-kbrw.onrender.com/usuarios', {nome, sexo, idade, altura, peso, posicao, numeroDaCamisa})
             exibirMensagem(response.data.mensagem || 'Jogador cadastrado com sucesso!', 'sucesso')
             setNome('')
             setSexo('')
